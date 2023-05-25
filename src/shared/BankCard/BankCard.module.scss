@@ -1,0 +1,59 @@
+.card {
+
+    height: 160px;
+
+    max-width: 250px;
+
+    background-image: url('./assets/background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    color: white;
+
+    padding: 20px;
+    box-shadow: 0 0 4px #000;
+    border-radius: 10px;
+
+    transform: scale(1.2);
+
+    @media screen and (max-width: 426px) {
+        transform: scale(1);
+    }
+
+    .head {
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Kanit', sans-serif;
+    }
+
+    .card_wrapper_input {
+
+        display: grid;
+        grid-template-areas: 'inputNumber inputNumber'
+                             'inputDate inputCVV';
+
+        grid-template-columns: 60% 30%;    
+        grid-column-gap: 20px;  
+        grid-row-gap: 15px;         
+        
+        margin-top: 20px;
+
+        .card_input_title {
+            display: block;
+            margin-bottom: 5px;
+        }
+    
+        .card_input_number {
+            grid-area: inputNumber;
+        }
+    
+        .card_input_date {
+            grid-area: inputDate;
+           
+        }
+    
+        .card_input_cvv {
+            grid-area: inputCVV;
+        }
+    }
+}

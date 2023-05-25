@@ -1,0 +1,16 @@
+<svg width="414" height="280" viewBox="0 0 414 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_515_2)">
+<rect width="414" height="280" fill="url(#paint0_linear_515_2)"/>
+<ellipse cx="380" cy="67" rx="107" ry="110" fill="#44C2FD" fill-opacity="0.34"/>
+<path d="M446.091 249.201C430.771 308.878 369.974 344.837 310.297 329.517C250.619 314.198 214.66 253.4 229.98 193.723C245.3 134.045 306.097 98.0862 365.774 113.406C425.452 128.726 461.411 189.523 446.091 249.201Z" fill="#3D87EB" fill-opacity="0.3"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_515_2" x1="207" y1="280" x2="207" y2="16" gradientUnits="userSpaceOnUse">
+<stop offset="0.419792" stop-color="#44C2FD"/>
+<stop offset="0.982292" stop-color="#4368FE"/>
+</linearGradient>
+<clipPath id="clip0_515_2">
+<rect width="414" height="280" fill="white"/>
+</clipPath>
+</defs>
+</svg>
