@@ -1,0 +1,14 @@
+{
+    "books": [
+        {
+            "id": 0,
+            "name": "Звёздные войны. Траун. Союзники",
+            "author": "Тимати Зан",
+            "category": "Роман",
+            "image": "0.webp",
+            "countPages": 340,
+            "isAvailable": true,
+            "price": 650
+        }
+    ]
+}
