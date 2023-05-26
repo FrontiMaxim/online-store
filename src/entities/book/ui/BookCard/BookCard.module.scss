@@ -1,0 +1,42 @@
+@import '../../../../shared/styles/color';
+
+.card {
+    
+    width: 260px;
+    
+    display: grid;
+    grid-template-areas: 'image name'
+                            'image author'
+                            'image price';
+
+    grid-column-gap: 10px;  
+
+    .card_image {
+        width: 110px;
+        grid-area: image;
+    }
+
+    .card_name {
+        grid-area: name;
+
+        align-self: center;
+
+        font-weight: 700;
+        color: $dark;
+    }
+
+    .card_author {
+        grid-area: author;
+        font-size: 14px;
+        color: $grey;
+    }
+
+    .card_price {
+        grid-area: price;
+
+       font-weight: 700;
+        color: $dark;
+        font-size: 12px;
+    }
+
+}
