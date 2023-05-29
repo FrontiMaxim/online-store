@@ -1,0 +1,21 @@
+.page {
+
+    .grid {
+        border: 1px solid #000;
+
+        width: 80%;
+        height: 80vh;
+
+        overflow-y: auto;
+
+        // @media screen and (max-width: 426px) {
+        //     width: 100%;
+        // }
+
+        // @media screen and (max-width: 1024px) {
+        //     width: 90%;
+        // }
+       
+        
+    }
+}
