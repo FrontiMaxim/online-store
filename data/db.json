@@ -2,11 +2,46 @@
     "books": [
         {
             "id": 0,
-            "name": "Звёздные войны. Траун. Союзники",
+            "name": "А",
+            "author": "Тимати Зан",
+            "category": "Фантастика",
+            "image": "0.webp",
+            "isAvailable": true,
+            "price": 650
+        },
+        {
+            "id": 1,
+            "name": "Д",
             "author": "Тимати Зан",
             "category": "Роман",
             "image": "0.webp",
-            "countPages": 340,
+            "isAvailable": true,
+            "price": 350
+        },
+        {
+            "id": 2,
+            "name": "И",
+            "author": "Тимати Зан",
+            "category": "Фантастика",
+            "image": "0.webp",
+            "isAvailable": true,
+            "price": 250
+        },
+        {
+            "id": 3,
+            "name": "П",
+            "author": "Тимати Зан",
+            "category": "Роман",
+            "image": "0.webp",
+            "isAvailable": true,
+            "price": 1000
+        },
+        {
+            "id": 4,
+            "name": "В",
+            "author": "Тимати Зан",
+            "category": "Роман",
+            "image": "0.webp",
             "isAvailable": true,
             "price": 650
         }
