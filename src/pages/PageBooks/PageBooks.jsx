@@ -10,9 +10,9 @@ import GridBooks from '../../widgets/GridBooks/GridBooks';
 import styles from './PageBooks.module.scss';
 
 import useBooks from '../../entities/book/hooks/useBooks';
-import sortBooksByPrice from '../../features/sortBooksByPrice';
-import sortBooksByName from '../../features/sortBooksByName';
-import filterBooksByCategory from '../../features/filterBooksByCategory';
+
+import FormSettingListBooks from '../../widgets/FormSettingListBooks/FormSettingListBooks';
+import editListBySettings from '../../features/editListBySettings';
 
 
 const PageBooks = () => {
@@ -31,38 +31,14 @@ const PageBooks = () => {
 
     return (
         <div className={styles.page}>   
+            <FormSettingListBooks 
+                handlerSetting={(settings) => dispatch(updateListBooks(editListBySettings(constantList, settings)))}
+                handlerReset={() => dispatch(updateListBooks(constantList))}
+            />
+
             <div className={styles.grid}>
                 <GridBooks books={list}/>
-                
             </div>
-            <button
-                    onClick={() => {
-                        dispatch(updateListBooks(sortBooksByPrice(list)));
-                    }}
-                >
-                Сортировкать по цене
-            </button>
-            <button
-                    onClick={() => {
-                        dispatch(updateListBooks(sortBooksByName(list)));
-                    }}
-                >
-                Сортировкать по названию книги
-            </button>
-            <button
-                    onClick={() => {
-                        dispatch(updateListBooks(filterBooksByCategory(list, 'Роман')));
-                    }}
-                >
-                Фильтр на категорию Роман
-            </button>
-            <button
-                    onClick={() => {
-                        dispatch(updateListBooks(constantList));
-                    }}
-                >
-                Сбросить настройки
-            </button>
         </div>
     )
 }
