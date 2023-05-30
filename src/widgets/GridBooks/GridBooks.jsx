@@ -17,6 +17,7 @@ const GridBooks = ({ books }) => {
               category={book.category}
               image={book.image}
               price={book.price}
+              isAvailable={book.isAvailable}
             />
           </div>
         )

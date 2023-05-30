@@ -8,7 +8,7 @@ import Button from '../../shared/Button/Button';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../../store/cartSlice';
 
-function BookCardWithCartAndCategory({id, name, author, category, image, price}) {
+function BookCardWithCartAndCategory({id, name, author, category, image, price, isAvailable}) {
 
     const dispatch = useDispatch();
 
@@ -24,11 +24,17 @@ function BookCardWithCartAndCategory({id, name, author, category, image, price})
                 price={price}
             />
             <div className={styles.card_cart}>
-                <Button 
-                    value='Добавить в корзину' 
-                    mode='primary'
-                    handlerClick={() =>  dispatch(addBook({id, image, name, author, price}))}
-                />
+                {
+                    isAvailable ? 
+                    <Button 
+                        value='Добавить в корзину' 
+                        mode='primary'
+                        handlerClick={() =>  dispatch(addBook({id, image, name, author, price}))}
+                    />
+                    :
+                    <div className={styles.card_not_available}>Нет в наличии</div>
+                }
+               
             </div>
         </div>
     )
