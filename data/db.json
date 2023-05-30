@@ -6,7 +6,7 @@
             "author": "Тимати Зан",
             "category": "Фантастика",
             "image": "0.webp",
-            "isAvailable": true,
+            "isAvailable": false,
             "price": 650
         },
         {
@@ -24,7 +24,7 @@
             "author": "Тимати Зан",
             "category": "Фантастика",
             "image": "0.webp",
-            "isAvailable": true,
+            "isAvailable": false,
             "price": 250
         },
         {
