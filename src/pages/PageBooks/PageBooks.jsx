@@ -14,6 +14,7 @@ import useBooks from '../../entities/book/hooks/useBooks';
 import FormSettingListBooks from '../../widgets/FormSettingListBooks/FormSettingListBooks';
 import editListBySettings from '../../features/editListBySettings';
 
+import Cart from '../../widgets/Cart/Cart';
 
 const PageBooks = () => {
 
@@ -35,6 +36,10 @@ const PageBooks = () => {
                 handlerSetting={(settings) => dispatch(updateListBooks(editListBySettings(constantList, settings)))}
                 handlerReset={() => dispatch(updateListBooks(constantList))}
             />
+
+            <div className={styles.cart}>
+                <Cart />
+            </div>
 
             <div className={styles.grid}>
                 <GridBooks books={list}/>
