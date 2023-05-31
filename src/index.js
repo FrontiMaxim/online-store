@@ -9,6 +9,7 @@ import store from './store/store';
 import App from './App';
 
 import PageBooks from './pages/PageBooks/PageBooks';
+import PageCart from './pages/PageCart/PageCart';
 
 const router = createBrowserRouter([
     {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
     },
     {
       path: "/cart",
-      element: <div>Корзина</div>,
+      element: <PageCart />,
     },
     {
       path: "/order",
