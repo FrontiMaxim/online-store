@@ -13,7 +13,7 @@ import { dataCheckbox, dataSelectSort, dataSelectAvailable } from './data';
 
 
 const FormSettingListBooks = ({handlerSetting, handlerReset}) => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     
     const onSubmit = (settings) => handlerSetting(settings);
 
@@ -47,7 +47,10 @@ const FormSettingListBooks = ({handlerSetting, handlerReset}) => {
 
             <Button 
                 value='Сбросить настройки' 
-                handlerClick={handlerReset} 
+                handlerClick={() => {
+                    reset();
+                    handlerReset();
+                }} 
                 mode='default'
                 type='reset'
             />
