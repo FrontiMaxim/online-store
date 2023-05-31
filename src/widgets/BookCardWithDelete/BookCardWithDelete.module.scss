@@ -1,0 +1,14 @@
+@import '../../shared/styles/color';
+
+.card {
+    .card_information {
+
+    }
+
+    .card_delete {
+        fill: $primary;
+        font-size: 30px;
+
+        cursor: pointer;
+    }
+}
