@@ -14,12 +14,6 @@
     box-shadow: 0 0 4px #000;
     border-radius: 10px;
 
-    transform: scale(1.2);
-
-    @media screen and (max-width: 426px) {
-        transform: scale(1);
-    }
-
     .head {
         display: flex;
         justify-content: space-between;
