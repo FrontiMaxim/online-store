@@ -10,6 +10,7 @@ import App from './App';
 
 import PageBooks from './pages/PageBooks/PageBooks';
 import PageCart from './pages/PageCart/PageCart';
+import Order from './process/Order/Order';
 
 const router = createBrowserRouter([
     {
@@ -18,11 +19,11 @@ const router = createBrowserRouter([
     },
     {
       path: "/cart",
-      element: <PageCart />,
+      element: <PageCart />
     },
     {
       path: "/order",
-      element: <div>Оформление заказа</div>,
+      element: <Order />
     }
 ]);
 
