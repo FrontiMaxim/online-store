@@ -1,17 +1,19 @@
 import React from 'react';
 
 import styles from './PageCart.module.scss';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import calculateTotal from '../../features/calculateTotal';
 
 import Button from '../../shared/Button/Button';
 import BookCardWithDelete from '../../widgets/BookCardWithDelete/BookCardWithDelete';
 import { useNavigate } from 'react-router-dom';
+import { addBooks } from '../../store/orderSlice';
 
 const PageCart = () => {
 
     const { books } = useSelector(state => state.cart);
+    const dispatch = useDispatch();
     const navigate = useNavigate();
 
     return (
@@ -33,7 +35,10 @@ const PageCart = () => {
             <Button 
                 value='Оформить заказ' 
                 mode='primary' 
-                handlerClick={() => navigate('/order')}
+                handlerClick={() => {
+                    dispatch(addBooks(books))
+                    navigate('/order');
+                }}
             />
         </div>
     )
