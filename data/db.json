@@ -45,5 +45,28 @@
             "isAvailable": true,
             "price": 650
         }
-    ]
+    ],
+
+    "points" : [
+        {
+            "id": 0,
+            "latitude": 53.209465, 
+            "longitude": 50.175616,
+            "address": "Революционная улица, 64Б"
+        },
+        {
+            "id": 1,
+            "latitude": 53.191276,  
+            "longitude": 50.098864,
+            "address": "улица Льва Толстого, 56"
+        },
+        {
+            "id": 2,
+            "latitude": 53.186872, 
+            "longitude": 50.127691, 
+            "address": "Красноармейская улица, 131"
+        }
+    ],
+
+    "orders": []
 }
