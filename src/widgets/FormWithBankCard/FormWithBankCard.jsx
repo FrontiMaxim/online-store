@@ -6,8 +6,12 @@ import BankCard from '../BankCard/BankCard';
 import Button from '../../shared/Button/Button';
 
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { addBankCard } from '../../store/orderSlice';
 
-const FormWithBankCard = ({ setStage }) => {
+const FormWithBankCard = ({ setStage, numberStage }) => {
+
+    const dispatch = useDispatch();
 
     const { register, handleSubmit, formState : { errors, isValid} } = useForm({
         mode: 'onSubmit',
@@ -15,10 +19,10 @@ const FormWithBankCard = ({ setStage }) => {
     });
 
     const onSubmit= (data) => {
-        console.log(data);
-
+       
         if(isValid) {
-            setStage(2);
+            setStage(numberStage);
+            dispatch(addBankCard(data));
         }   
     }
 
@@ -26,13 +30,13 @@ const FormWithBankCard = ({ setStage }) => {
         <form className={styles.from}>
             <BankCard 
                 register={register} 
-                nameFieldNumber='numberBankCard'
-                nameFieldDate='dateBankCard'
-                nameFieldCVV='cvvBankCard'
+                nameFieldNumber='number'
+                nameFieldDate='date'
+                nameFieldCVV='cvv'
                 errors={errors}
             />
             <Button 
-                value='Перейти к следующему пункту' 
+                value='Оплатить заказ' 
                 mode='primary' 
                 handlerClick={handleSubmit(onSubmit)}
             />
