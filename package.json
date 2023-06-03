@@ -11,6 +11,7 @@
   "author": "FrontiMax@yandex.ru",
   "license": "ISC",
   "dependencies": {
+    "@pbe/react-yandex-maps": "^1.2.4",
     "@reduxjs/toolkit": "^1.9.5",
     "classnames": "^2.3.2",
     "normalize.css": "^8.0.1",
