@@ -44,6 +44,42 @@
             "image": "0.webp",
             "isAvailable": true,
             "price": 650
+        },
+        {
+            "id": 5,
+            "name": "В",
+            "author": "Тимати Зан",
+            "category": "Роман",
+            "image": "0.webp",
+            "isAvailable": true,
+            "price": 650
+        },
+        {
+            "id": 6,
+            "name": "В",
+            "author": "Тимати Зан",
+            "category": "Роман",
+            "image": "0.webp",
+            "isAvailable": true,
+            "price": 650
+        },
+        {
+            "id": 7,
+            "name": "В",
+            "author": "Тимати Зан",
+            "category": "Роман",
+            "image": "0.webp",
+            "isAvailable": true,
+            "price": 650
+        }, 
+        {
+            "id": 8,
+            "name": "В",
+            "author": "Тимати Зан",
+            "category": "Роман",
+            "image": "0.webp",
+            "isAvailable": true,
+            "price": 650
         }
     ],
 
