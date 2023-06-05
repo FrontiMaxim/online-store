@@ -11,7 +11,7 @@ import usePoints from '../../entities/points/hooks/usePoints';
 import findPointById from '../../features/findPointById';
 import useCurrentPosition from '../../shared/hooks/useCurrentPosition';
 
-import Button from '../../shared/Button/Button';
+import Button from '../../shared/components/Button/Button';
 import { useDispatch } from 'react-redux';
 import { addAddress } from '../../store/orderSlice';
 

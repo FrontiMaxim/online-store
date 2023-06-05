@@ -6,7 +6,7 @@ import cn from 'classnames';
 
 import InputError from '../InputError/InputError';
 
-import formatPhone from '../../features/formatPhone';
+import formatPhone from '../../../features/formatPhone';
 
 const InputPhone = ({name, register, error, placeholder='+7(xxx)-xxx-xxxx'}) => {
 

@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Cart.module.scss';
 
 import { BsCart } from 'react-icons/bs';
-import Badge from '../../shared/Badge/Badge';
+import Badge from '../../shared/components/Badge/Badge';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 

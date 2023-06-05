@@ -2,11 +2,11 @@ import React from 'react';
 
 import style from './FormPersonalData.module.scss';
 import { useForm } from 'react-hook-form';
-import Label from '../../shared/Label/Label';
-import InputText from '../../shared/InputText/InputText';
-import InputPhone from '../../shared/InputPhone/InputPhone';
-import InputEmail from '../../shared/InputEmail/InputEmail';
-import Button from '../../shared/Button/Button';
+import Label from '../../shared/components/Label/Label';
+import InputText from '../../shared/components/InputText/InputText';
+import InputPhone from '../../shared/components/InputPhone/InputPhone';
+import InputEmail from '../../shared/components/InputEmail/InputEmail';
+import Button from '../../shared/components/Button/Button';
 import { useDispatch } from 'react-redux';
 import { addPersonalData } from '../../store/orderSlice';
 

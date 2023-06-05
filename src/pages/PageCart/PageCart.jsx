@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import calculateTotal from '../../features/calculateTotal';
 
-import Button from '../../shared/Button/Button';
+import Button from '../../shared/components/Button/Button';
 import BookCardWithDelete from '../../widgets/BookCardWithDelete/BookCardWithDelete';
 import { useNavigate } from 'react-router-dom';
 import { addBooks } from '../../store/orderSlice';

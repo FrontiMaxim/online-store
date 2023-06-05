@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './BankCard.module.scss';
 
-import InputNumberBankCard from '../../shared/InputNumberBankCard/InputNumberBankCard';
-import InputDateBankCard from '../../shared/InputDateBankCard/InputDateBankCard';
-import InputCVVBANKCard from '../../shared/InputCVVBANKCard/InputCVVBANKCard';
+import InputNumberBankCard from '../../shared/components/InputNumberBankCard/InputNumberBankCard';
+import InputDateBankCard from '../../shared/components/InputDateBankCard/InputDateBankCard';
+import InputCVVBANKCard from '../../shared/components/InputCVVBANKCard/InputCVVBANKCard';
 
 const BankCard = ({register, nameFieldNumber, nameFieldDate, nameFieldCVV, errors}) => {
 

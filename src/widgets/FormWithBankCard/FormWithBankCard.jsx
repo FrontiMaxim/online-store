@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './FormWithBankCard.module.scss';
 
 import BankCard from '../BankCard/BankCard';
-import Button from '../../shared/Button/Button';
+import Button from '../../shared/components/Button/Button';
 
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';

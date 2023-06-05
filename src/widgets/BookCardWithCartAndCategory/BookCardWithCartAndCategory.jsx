@@ -3,7 +3,7 @@ import React from 'react';
 import BookCard from '../../entities/book/ui/BookCard/BookCard';
 
 import styles from './BookCardWithCartAndCategory.module.scss';
-import Button from '../../shared/Button/Button';
+import Button from '../../shared/components/Button/Button';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { addBook } from '../../store/cartSlice';

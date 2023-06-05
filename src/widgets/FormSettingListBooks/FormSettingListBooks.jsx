@@ -4,10 +4,10 @@ import styles from './FormSettingListBooks.module.scss';
 
 import { useForm } from 'react-hook-form';
 
-import Button from '../../shared/Button/Button';
-import Label from '../../shared/Label/Label';
-import Select from '../../shared/Select/Select';
-import Checkbox from '../../shared/Checkbox/Checkbox';
+import Button from '../../shared/components/Button/Button';
+import Label from '../../shared/components/Label/Label';
+import Select from '../../shared/components/Select/Select';
+import Checkbox from '../../shared/components/Checkbox/Checkbox';
 
 import { dataCheckbox, dataSelectSort, dataSelectAvailable } from './data';
 
