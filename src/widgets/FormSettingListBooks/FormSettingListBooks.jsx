@@ -20,40 +20,51 @@ const FormSettingListBooks = ({handlerSetting, handlerReset}) => {
     return (
         <form className={styles.form}>
 
-           <Label text='Сортировка списка:'>
-                <Select register={register} name='typeSort' data={dataSelectSort} />
-           </Label>
+            <div className={styles.from_input_group}>
+                <Label text='Сортировка списка:'>
+                    <Select register={register} name='typeSort' data={dataSelectSort} />
+                </Label>
+            </div>
+            
+            <div className={styles.from_input_group}>
+                <Label text='Фильтр по наличию:'>
+                    <Select register={register} name='available' data={dataSelectAvailable} />
+                </Label>
+            </div>
 
-           <Label text='Фильтр по наличию:'>
-                <Select register={register} name='available' data={dataSelectAvailable} />
-           </Label>
-
-            <div>
-                <div>Фильтр категорий:</div>
+            <div className={styles.from_input_group}>
+                <Label text='Фильтр категорий:' />
                 {
                     dataCheckbox.map(({key, value}) => 
-                        <Label text={key} key={key}>
+                        <div key={key} className={styles.from_input_group_checkbox}>
                             <Checkbox register={register} name='categories' value={value} />
-                        </Label>
+                            <span>{key}</span>
+                        </div>
                     )
                 }
             </div>
-          
-            <Button 
-                value='Применить' 
-                handlerClick={handleSubmit(onSubmit)} 
-                mode='primary'
-            />
 
-            <Button 
-                value='Сбросить настройки' 
-                handlerClick={() => {
-                    reset();
-                    handlerReset();
-                }} 
-                mode='default'
-                type='reset'
-            />
+            <div className={styles.from_button}>
+                <Button 
+                    value='Применить' 
+                    handlerClick={handleSubmit(onSubmit)} 
+                    mode='primary'
+                />
+            </div>
+          
+            
+            <div className={styles.from_button}>
+                <Button 
+                    value='Сбросить настройки' 
+                    handlerClick={() => {
+                        reset();
+                        handlerReset();
+                    }} 
+                    mode='default'
+                    type='reset'
+                />
+            </div>
+           
         </form>
     )
 }

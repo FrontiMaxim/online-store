@@ -8,6 +8,9 @@ const GridBooks = ({ books }) => {
   return (
     <div className={styles.grid}>
       {
+        !books.length ?
+        <div className={styles.grid_empty}>Ничего нет...</div>
+        :
         books.map(book => 
           <div className={styles.grid_item}  key={book.id}>
             <BookCardWithCartAndCategory 

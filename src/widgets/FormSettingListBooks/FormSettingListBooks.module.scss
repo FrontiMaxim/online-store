@@ -1,0 +1,29 @@
+@import '../../shared/styles/color';
+
+.form {
+
+    background-color: $white;
+
+    .from_input_group {
+        margin-top: 10px;
+    }
+
+    .from_input_group_checkbox  {
+
+        display: flex;
+        align-items: center;
+
+        margin-top: 5px;
+
+        span {
+            margin-left: 4px;
+        }
+    }
+
+    .from_button {
+        width: 100%;
+        height: 40px;
+
+        margin-top: 10px;
+    }
+}
