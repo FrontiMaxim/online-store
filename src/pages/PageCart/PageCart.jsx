@@ -32,14 +32,20 @@ const PageCart = () => {
                 )
             } 
             <div>Итоговая сумма: {calculateTotal(books)}</div>
-            <Button 
-                value='Оформить заказ' 
-                mode='primary' 
-                handlerClick={() => {
-                    dispatch(addBooks(books))
-                    navigate('/order');
-                }}
-            />
+
+            {
+                books.length && 
+
+                <Button 
+                    value='Оформить заказ' 
+                    mode='primary' 
+                    handlerClick={() => {
+                        dispatch(addBooks(books))
+                        navigate('/order'); 
+                    }}
+                />
+            }
+            
         </div>
     )
 }
