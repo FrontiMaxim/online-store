@@ -5,8 +5,7 @@
     height: 100%;
 
     border: none;
-    border-radius: 10px;
-
+    
     font-weight: 700;
 
     cursor: pointer;
@@ -30,4 +29,8 @@
     color: $white;
 
     background-color: $primary;
+}
+
+.border_radius {
+    border-radius: 10px;
 }
