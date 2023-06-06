@@ -44,7 +44,7 @@ const PageCart = () => {
             </div>
            
             {
-                books.length && 
+                books.length !== 0 && 
 
                 <div className={styles.page_btn}>
                     <Button 
