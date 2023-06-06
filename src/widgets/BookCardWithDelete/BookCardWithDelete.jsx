@@ -5,8 +5,8 @@ import styles from './BookCardWithDelete.module.scss';
 import { useDispatch } from 'react-redux';
 
 import BookCard from '../../entities/book/ui/BookCard/BookCard';
+import Button from '../../shared/components/Button/Button';
 
-import { MdDeleteOutline } from 'react-icons/md';
 import { deleteBook } from '../../store/cartSlice';
 
 const BookCardWithDelete = ({id, name, author, image, price}) => {
@@ -24,10 +24,14 @@ const BookCardWithDelete = ({id, name, author, image, price}) => {
                 />
             </div>
 
-            <MdDeleteOutline 
-                className={styles.card_delete} 
-                onClick={() => dispatch(deleteBook(id))}
-            />
+            <div className={styles.card_delete} >
+                <Button value='Убрать из корзины'
+                    handlerClick={() => dispatch(deleteBook(id))}
+                    mode='primary'
+                />
+            </div>
+            
+           
         </div>
     )
 }

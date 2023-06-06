@@ -18,32 +18,45 @@ const PageCart = () => {
 
     return (
         <div className={styles.page}>
-            <div>Корзина</div>
-            {
-                books.map(({id, name, author, image, price}) => 
-                    <BookCardWithDelete 
-                        key={id}
-                        id={id}
-                        name={name}
-                        author ={author}
-                        image={image}
-                        price={price} 
-                    />
-                )
-            } 
-            <div>Итоговая сумма: {calculateTotal(books)}</div>
+            <h1 className={styles.page_head}>Корзина</h1>
 
+            <div className={styles.page_sum}>
+                <h3>Итоговая сумма:</h3>
+                <span>{` ${calculateTotal(books)} `}&#8381;</span>
+                
+            </div>
+
+            <div className={styles.page_list}>
+                {
+                    books.map(({id, name, author, image, price}) => 
+                    <div className={styles.page_list_item}>
+                        <BookCardWithDelete 
+                            key={id}
+                            id={id}
+                            name={name}
+                            author ={author}
+                            image={image}
+                            price={price} 
+                        />
+                    </div> 
+                    )
+                } 
+            </div>
+           
             {
                 books.length && 
 
-                <Button 
-                    value='Оформить заказ' 
-                    mode='primary' 
-                    handlerClick={() => {
-                        dispatch(addBooks(books))
-                        navigate('/order'); 
-                    }}
-                />
+                <div className={styles.page_btn}>
+                    <Button 
+                        value='Оформить заказ' 
+                        mode='primary' 
+                        handlerClick={() => {
+                            dispatch(addBooks(books))
+                            navigate('/order'); 
+                        }}
+                        borderRadius={false}
+                    />
+                </div>
             }
             
         </div>
