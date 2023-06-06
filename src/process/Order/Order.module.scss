@@ -1,0 +1,50 @@
+@import '../../shared/styles/color';
+
+.order {
+
+    h1 {
+        text-align: center;
+    }
+
+    .stages {
+
+        display: flex;
+        justify-content: center;
+
+        margin-top: 20px;
+
+        .stage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 50px;
+            height: 50px;
+
+            border: 2px solid $dark;
+            border-radius: 50%;
+
+            font-weight: 700;;
+            color: $dark;
+
+            cursor: pointer;
+
+            &:nth-child(2) {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+
+        .stage_active {
+            border: none;
+
+            background-color: $primary;
+
+            color: $white;
+        }
+    }
+
+    .content {
+        margin-top: 40px;
+    }
+}

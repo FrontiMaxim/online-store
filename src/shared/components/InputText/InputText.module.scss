@@ -1,7 +1,15 @@
-.input {
-    width: 100%;
+@import '../../styles/input';
 
-    border: none;
+.input {
     
-    outline: none;
+    @include input;
+}
+
+.wrapper_error {
+    margin-top: 5px;
+}
+
+.input_error {
+    border: 1px solid $error;
+    box-shadow: 0 0 5px $error;
 }

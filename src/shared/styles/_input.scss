@@ -1,0 +1,14 @@
+@import './color';
+
+@mixin input {
+
+    padding: 10px;
+
+    width: 100%;
+
+    outline: none;
+    border: none;
+
+    box-shadow: 0 0 4px $dark;
+    border-radius: 10px;
+}

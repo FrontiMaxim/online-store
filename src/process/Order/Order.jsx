@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import styles from './Order.module.scss';
 
 import FormWithBankCard from '../../widgets/FormWithBankCard/FormWithBankCard';
-import { useState } from 'react';
+
 import FormGeolacation from '../../widgets/FormGeolacation/FormGeolacation';
-import { useEffect } from 'react';
+
 import FormPersonalData from '../../widgets/FormPersonalData/FormPersonalData';
+
+import cn from 'classnames';
 
 const Order = () => {
 
     const [stage, setStage] = useState(1);
+
+    const stages = [1, 2, 3];
 
     useEffect(() => {
         if (stage === 0) {
@@ -20,16 +24,35 @@ const Order = () => {
 
     return (
         <div className={styles.order}>
-            
-            {
-                stage === 1 && <FormPersonalData setStage={setStage} numberStage={2} />
-            }
-            {
-                stage === 2 && <FormGeolacation setStage={setStage} numberStage={3} />
-            }
-            {
-                stage === 3 && <FormWithBankCard setStage={setStage} numberStage={0}/>
-            }
+
+            <h1>Оформление заказа</h1>
+
+            <div className={styles.stages}>
+                {
+                    stages.map(s => 
+                        <div className={cn(styles.stage, {
+                            [styles.stage_active]: s === stage
+                        })}
+                            onClick={() => setStage(s)}
+                            key={s}
+                        >
+                            {s}
+                        </div>
+                    )
+                }
+            </div>
+
+            <div className={styles.content}>
+                {
+                    stage === 1 && <FormPersonalData setStage={setStage} numberStage={2} />
+                }
+                {
+                    stage === 2 && <FormGeolacation setStage={setStage} numberStage={3} />
+                }
+                {
+                    stage === 3 && <FormWithBankCard setStage={setStage} numberStage={0}/>
+                }
+            </div>
             
         </div>
     )

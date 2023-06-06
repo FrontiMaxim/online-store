@@ -12,7 +12,7 @@ import findPointById from '../../features/findPointById';
 import useCurrentPosition from '../../shared/hooks/useCurrentPosition';
 
 import Button from '../../shared/components/Button/Button';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addAddress } from '../../store/orderSlice';
 
 
@@ -20,7 +20,9 @@ const FormGeolacation = ({ setStage, numberStage }) => {
 
     const dispatch = useDispatch();
 
-    const [point, setPoint] = useState(null);
+    const { address } = useSelector(state => state.order)
+ 
+    const [point, setPoint] = useState({address});
 
     const { latitude, longitude } = useCurrentPosition();
 
@@ -35,17 +37,21 @@ const FormGeolacation = ({ setStage, numberStage }) => {
 
     return (
         <form className={styles.form}>
-            <div>Выберите на карте пункт выдачи</div>
-            {
-                point ? 
-                <div>{point.address}</div>
-                :
-                <div>не выбран</div>
-            }
+            <div className={styles.form_point}>
+                <span className={styles.form_point_title}>Выберите на карте пункт выдачи: </span>
+                {
+                    point ? 
+                    <span>{point.address}</span>
+                    :
+                    <span>не выбран</span>
+                }
+            </div>
             
-            <YMaps >
+            
+            <YMaps>
                 <Map  
-                
+               
+                    className={styles.form_map}
                     defaultState={
                         { 
                             center: [GEOLOCATION_SAMARA.latitude, GEOLOCATION_SAMARA.longitude], 
@@ -85,11 +91,12 @@ const FormGeolacation = ({ setStage, numberStage }) => {
                 </Map>
             </YMaps>
 
-            <div disabled={point}>
+            <div className={styles.form_btn}>
                 <Button 
-                    value='Перейти к следующему пункту' 
+                    value='Сохранить и продолжить' 
                     mode='primary' 
                     handlerClick={onSubmit}
+                    borderRadius={false}
                 />
             </div>
         

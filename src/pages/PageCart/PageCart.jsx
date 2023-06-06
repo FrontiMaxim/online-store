@@ -29,9 +29,8 @@ const PageCart = () => {
             <div className={styles.page_list}>
                 {
                     books.map(({id, name, author, image, price}) => 
-                    <div className={styles.page_list_item}>
+                    <div key={id} className={styles.page_list_item}>
                         <BookCardWithDelete 
-                            key={id}
                             id={id}
                             name={name}
                             author ={author}
