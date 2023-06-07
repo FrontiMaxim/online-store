@@ -7,22 +7,16 @@ import InputText from '../../shared/components/InputText/InputText';
 import InputPhone from '../../shared/components/InputPhone/InputPhone';
 import InputEmail from '../../shared/components/InputEmail/InputEmail';
 import Button from '../../shared/components/Button/Button';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addPersonalData } from '../../store/orderSlice';
 
 const FormPersonalData = ({ setStage, numberStage }) => {
 
     const dispatch = useDispatch();
-    const { name, email, phone } = useSelector(state => state.order.personalData);
 
     const { register, handleSubmit, formState: { isValid, errors }} = useForm({
         mode: 'onSubmit',
-        reValidateMode: 'onBlur',
-        defaultValues: {
-            name,
-            email,
-            phone
-        }
+        reValidateMode: 'onBlur'
     });
 
     const onSubmit = (data) => {

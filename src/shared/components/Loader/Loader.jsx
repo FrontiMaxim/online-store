@@ -2,11 +2,15 @@ import React from 'react';
 import { TbLoader } from 'react-icons/tb';
 
 import styles from './Loader.module.scss';
+import cn from 'classnames';
 
-const Loader = () => {
+const Loader = ({ color='default' }) => {
   return (
     <>
-       <TbLoader className={styles.loader} />
+       <TbLoader className={cn(styles.loader, {
+        [styles.primary]: color === 'primary',
+        [styles.default]: color === 'default',
+       })} />
     </>
   )
 }

@@ -12,7 +12,7 @@ import { addBankCard } from '../../store/orderSlice';
 const FormWithBankCard = ({ setStage, numberStage }) => {
 
     const dispatch = useDispatch();
-
+    
     const { register, handleSubmit, formState : { errors, isValid} } = useForm({
         mode: 'onSubmit',
         reValidateMode: 'onBlur'
@@ -27,19 +27,24 @@ const FormWithBankCard = ({ setStage, numberStage }) => {
     }
 
     return (
-        <form className={styles.from}>
-            <BankCard 
-                register={register} 
-                nameFieldNumber='number'
-                nameFieldDate='date'
-                nameFieldCVV='cvv'
-                errors={errors}
-            />
-            <Button 
-                value='Оплатить заказ' 
-                mode='primary' 
-                handlerClick={handleSubmit(onSubmit)}
-            />
+        <form className={styles.form}>
+            <div className={styles.form_bank}>
+                <BankCard 
+                    register={register} 
+                    nameFieldNumber='number'
+                    nameFieldDate='date'
+                    nameFieldCVV='cvv'
+                    errors={errors}
+                />
+            </div>
+            <div className={styles.form_btn}>
+                <Button 
+                    value='Оплатить заказ' 
+                    mode='primary' 
+                    handlerClick={handleSubmit(onSubmit)}
+                    borderRadius={false}
+                />
+            </div>
         </form>
     )
 }

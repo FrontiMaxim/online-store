@@ -22,21 +22,24 @@ const BankCard = ({register, nameFieldNumber, nameFieldDate, nameFieldCVV, error
                         error={errors[nameFieldNumber]}
                     />
                 </div>
-                <div className={styles.card_input_date}>
-                    <span className={styles.card_input_title}>Истечение срока</span>
-                    <InputDateBankCard
-                        register={register} 
-                        name={nameFieldDate} 
-                        error={errors[nameFieldDate]}
-                    />
-                </div>
-                <div className={styles.card_input_cvv}>
-                    <span className={styles.card_input_title}>CVV</span>
-                    <InputCVVBANKCard 
-                        register={register} 
-                        name={nameFieldCVV} 
-                        error={errors[nameFieldCVV]}
-                    />
+
+                <div className={styles.card_date_cvv}> 
+                    <div className={styles.card_input_date}>
+                        <span className={styles.card_input_title}>Истечение срока</span>
+                        <InputDateBankCard
+                            register={register} 
+                            name={nameFieldDate} 
+                            error={errors[nameFieldDate]}
+                        />
+                    </div>
+                    <div className={styles.card_input_cvv}>
+                        <span className={styles.card_input_title}>CVV</span>
+                        <InputCVVBANKCard 
+                            register={register} 
+                            name={nameFieldCVV} 
+                            error={errors[nameFieldCVV]}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

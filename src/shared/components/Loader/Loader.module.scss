@@ -7,8 +7,16 @@
     animation-timing-function: linear;
 
     font-size: 40px;
+   
+}
+
+.primary {
     color: $primary;
 }
+
+.default {
+    color: $white;
+} 
 
 @keyframes rotate {
     0% {

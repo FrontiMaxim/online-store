@@ -65,7 +65,7 @@ const PageBooks = () => {
                 {
                     isLoading ?
                     <div className={styles.grid_loader}>
-                        <Loader />
+                        <Loader color='primary' />
                     </div>
                     
                     :

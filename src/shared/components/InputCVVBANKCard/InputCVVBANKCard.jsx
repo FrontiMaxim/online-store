@@ -10,7 +10,7 @@ const InputCVVBANKCard = ({name, register, error, placeholder='XXX'}) => {
     const [value, setValue] = useState('');
     
     return (
-        <div>
+        <>
             <input 
                 type='password' 
                 placeholder={placeholder} 
@@ -47,8 +47,7 @@ const InputCVVBANKCard = ({name, register, error, placeholder='XXX'}) => {
                     <InputError message={error.message}/>
                 </div>   
             }
-        </div>
-        
+        </>
     )
 }
 

@@ -12,7 +12,7 @@ import findPointById from '../../features/findPointById';
 import useCurrentPosition from '../../shared/hooks/useCurrentPosition';
 
 import Button from '../../shared/components/Button/Button';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addAddress } from '../../store/orderSlice';
 
 
@@ -20,9 +20,7 @@ const FormGeolacation = ({ setStage, numberStage }) => {
 
     const dispatch = useDispatch();
 
-    const { address } = useSelector(state => state.order)
- 
-    const [point, setPoint] = useState({address});
+    const [point, setPoint] = useState(null);
 
     const { latitude, longitude } = useCurrentPosition();
 
