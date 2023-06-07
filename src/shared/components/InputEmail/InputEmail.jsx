@@ -24,6 +24,10 @@ const InputEmail = ({name, register, error, placeholder='email@address.com'}) =>
                 value: true,
                 message: 'Заполните поле'
               },
+              pattern: {
+                value: /[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}/,
+                message: 'Неверный формат почты'
+              }
         })} 
       />
       {
